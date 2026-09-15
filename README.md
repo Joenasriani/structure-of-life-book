@@ -1,21 +1,31 @@
 # The Structure of Life
 
-Production source for the sales page of **The Structure of Life — The Structure of Reasoning**.
+Canonical source for the study-book sales page.
 
-## Live production
+Production: https://the-structure-of-life.vercel.app
 
-https://the-structure-of-life.vercel.app
+## Sales-page rules
 
-## Product
+- No jargon.
+- No generic AI copy.
+- No generic AI visuals.
+- No common template sections, cards, badges, gradients, dashboard styling, startup styling, or decorative tech motifs.
+- No familiar conversion phrases that could belong to another product.
+- Every visible choice must come from this book: structure, hidden causes, limits, feedback, failure, reframing, model versus world.
+- Keep the page minimal and exact. Alignment is deliberate.
+- Selling comes first. The main buy action must be large, obvious, and close to the offer.
+- State the offer plainly: **Book + Free AI Frameworks**.
+- AI use must be specific: use the included frameworks to make an AI inspect assumptions, compare explanations, test what could be wrong, trace repeated failure, and reframe before settling on an answer.
+- Author credit stays visually secondary: `by J. NASR`.
 
-- 160-page study edition
-- 51-structure atlas
-- 6 applied case studies
-- study exercises
-- bounded AI reasoning protocol
+## Current selling line
 
-## Deployment
+> “What life repeats may be the structure your next model is missing.”
 
-Static HTML deployment on Vercel. The canonical production entry point is `index.html`.
+## Offer
 
-Author credit is intentionally restrained: **by J. NASR**.
+**The Structure of Life** study edition
+
+160 pages · 27 chapters · 51 structures · 6 case studies · free AI framework pack
+
+Price: **$23.33**
