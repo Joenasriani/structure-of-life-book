@@ -8,177 +8,20 @@
 <meta property="og:title" content="The Structure of Life | Study Book">
 <meta property="og:description" content="Book + free AI frameworks. See the structure beneath the problem before you build the answer.">
 <style>
-:root{
-  --ink:#111214;
-  --soft:#6d6e71;
-  --faint:#ececeb;
-  --signal:#9d1b1b;
-  --paper:#ffffff;
-  --serif:Georgia,"Times New Roman",serif;
-  --sans:Arial,Helvetica,sans-serif;
-  --max:1160px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif)}
-a{color:inherit}
-.shell{width:min(calc(100% - 44px),var(--max));margin:auto}
-.top{height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff}
-.top a{text-decoration:none}
-.brand{font:800 11px/1 var(--sans);letter-spacing:.14em}
-.top-buy{font:800 12px/1 var(--sans);letter-spacing:.04em;padding:14px 18px;background:var(--ink);color:#fff}
-
-.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:72px;align-items:center;min-height:760px;padding:76px 0 90px}
-.hero-copy{max-width:670px}
-.eyebrow{font:700 11px/1.3 var(--sans);letter-spacing:.11em;color:var(--soft);margin-bottom:22px}
-h1{font:900 clamp(58px,7.8vw,108px)/.87 var(--sans);letter-spacing:-.064em;margin:0 0 24px}
-.hero-line{font:400 clamp(24px,3vw,37px)/1.13 var(--serif);margin:0 0 26px;max-width:640px}
-.hero-body{font:400 18px/1.62 var(--serif);max-width:630px;margin:0 0 34px}
-.offer-note{font:700 12px/1.3 var(--sans);letter-spacing:.05em;margin-bottom:12px}
-.buy{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;width:100%;max-width:640px;min-height:82px;background:var(--ink);color:#fff;text-decoration:none;padding:0 24px}
-.buy:hover{background:var(--signal)}
-.buy span{font:900 16px/1 var(--sans);letter-spacing:.04em}
-.buy strong{font:900 30px/1 var(--sans)}
-.includes{font:400 12px/1.55 var(--sans);color:var(--soft);margin-top:13px}
-
-.book-zone{min-height:610px;display:flex;align-items:center;justify-content:center;position:relative}
-.book-cover{width:min(88%,390px);aspect-ratio:7/10;background:#fff;border:1px solid #c9c9c8;padding:42px 36px;display:flex;flex-direction:column;position:relative}
-.book-kicker{font:700 8px/1 var(--sans);letter-spacing:.15em;color:var(--soft)}
-.book-title{font:900 44px/.87 var(--sans);letter-spacing:-.055em;margin:28px 0 12px}
-.book-sub{font:italic 400 18px/1.17 var(--serif);max-width:250px}
-.book-axis{margin-top:auto;display:grid;grid-template-columns:1fr auto;align-items:end;gap:10px;font:800 9px/1 var(--sans);letter-spacing:.11em}
-.book-axis .world{color:var(--signal)}
-.book-author{font:400 8px/1 var(--sans);letter-spacing:.1em;color:#8b8b8a;margin-top:20px}
-
-.quote{padding:92px 0 104px}
-.quote p{font:900 clamp(48px,6.3vw,88px)/.93 var(--sans);letter-spacing:-.052em;margin:0;max-width:1010px}
-.quote em{font:italic 400 1em/1 var(--serif);color:var(--signal)}
-
-.inside{padding:98px 0 112px}
-.section-title{font:900 clamp(48px,6.4vw,88px)/.93 var(--sans);letter-spacing:-.052em;margin:0 0 54px;max-width:850px}
-.inside-row{display:grid;grid-template-columns:230px 1fr;gap:50px;padding:28px 0}
-.inside-row+.inside-row{border-top:1px solid var(--faint)}
-.inside-row strong{font:900 20px/1.05 var(--sans)}
-.inside-row p{font:400 17px/1.58 var(--serif);margin:0;max-width:720px}
-.free{color:var(--signal)}
-
-.case{padding:110px 0 124px;background:#111214;color:#fff}
-.case .section-title{max-width:970px}
-.case-lead{font:400 20px/1.55 var(--serif);max-width:760px;color:#d5d5d5;margin:0 0 48px}
-.case-flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px}
-.case-flow div{padding-top:8px}
-.case-flow small{display:block;font:700 10px/1.3 var(--sans);letter-spacing:.11em;color:#8f9093;margin-bottom:12px}
-.case-flow strong{font:900 23px/1.05 var(--sans);display:block;margin-bottom:10px}
-.case-flow p{font:400 15px/1.55 var(--serif);margin:0;color:#c7c7c7}
-.case-end{font:italic 400 30px/1.25 var(--serif);color:#fff;margin:54px 0 0;max-width:760px}
-
-.ai{padding:108px 0 122px}
-.ai .section-title{max-width:980px}
-.ai-intro{font:400 19px/1.6 var(--serif);max-width:760px;margin:0 0 46px}
-.framework{display:grid;grid-template-columns:1.05fr 2fr;gap:46px;padding:24px 0}
-.framework+.framework{border-top:1px solid var(--faint)}
-.framework strong{font:900 18px/1.1 var(--sans)}
-.framework p{font:400 16px/1.55 var(--serif);margin:0;max-width:700px}
-
-.final{padding:118px 0 130px;text-align:left}
-.final h2{font:900 clamp(52px,7vw,98px)/.89 var(--sans);letter-spacing:-.06em;margin:0 0 30px;max-width:980px}
-.final p{font:400 18px/1.58 var(--serif);max-width:740px;margin:0 0 34px}
-.final .buy{max-width:760px;min-height:92px}
-.final .buy span{font-size:18px}
-.final .buy strong{font-size:34px}
-
-footer{padding:28px 0 48px;font:400 10px/1.5 var(--sans);color:var(--soft);display:flex;justify-content:space-between;gap:24px}
-
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;gap:32px;min-height:auto;padding-top:54px}
-  .book-zone{order:-1;min-height:500px}
-  .book-cover{width:min(70vw,350px)}
-  .case-flow{grid-template-columns:1fr;gap:34px}
-}
-@media(max-width:620px){
-  .shell{width:calc(100% - 28px)}
-  .top{height:56px}.brand{font-size:10px}.top-buy{padding:12px 14px;font-size:10px}
-  .hero{padding:34px 0 64px}.book-zone{min-height:390px}.book-cover{width:min(76vw,300px);padding:32px 26px}.book-title{font-size:36px}
-  .buy{min-height:76px;padding:0 18px}.buy span{font-size:13px}.buy strong{font-size:25px}
-  .inside-row,.framework{grid-template-columns:1fr;gap:12px;padding:22px 0}
-  .quote,.inside,.ai{padding:72px 0}
-  .case{padding:76px 0 84px}.final{padding:82px 0 92px}
-  footer{flex-direction:column}
-}
+:root{--ink:#111214;--soft:#6d6e71;--faint:#ececeb;--signal:#9d1b1b;--paper:#ffffff;--serif:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif)}a{color:inherit}.shell{width:min(calc(100% - 44px),var(--max));margin:auto}.top{height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff}.top a{text-decoration:none}.brand{font:800 11px/1 var(--sans);letter-spacing:.14em}.top-buy{font:800 12px/1 var(--sans);letter-spacing:.04em;padding:14px 18px;background:var(--ink);color:#fff}.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:72px;align-items:center;min-height:760px;padding:76px 0 90px}.hero-copy{max-width:670px}.eyebrow{font:700 11px/1.3 var(--sans);letter-spacing:.11em;color:var(--soft);margin-bottom:22px}h1{font:900 clamp(58px,7.8vw,108px)/.87 var(--sans);letter-spacing:-.064em;margin:0 0 24px}.hero-line{font:400 clamp(24px,3vw,37px)/1.13 var(--serif);margin:0 0 26px;max-width:640px}.hero-body{font:400 18px/1.62 var(--serif);max-width:630px;margin:0 0 34px}.offer-note{font:700 12px/1.3 var(--sans);letter-spacing:.05em;margin-bottom:12px}.buy{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;width:100%;max-width:640px;min-height:82px;background:var(--ink);color:#fff;text-decoration:none;padding:0 24px}.buy:hover{background:var(--signal)}.buy span{font:900 16px/1 var(--sans);letter-spacing:.04em}.buy strong{font:900 30px/1 var(--sans)}.includes{font:400 12px/1.55 var(--sans);color:var(--soft);margin-top:13px}.book-zone{min-height:610px;display:flex;align-items:center;justify-content:center;position:relative}.book-cover{width:min(88%,390px);aspect-ratio:7/10;background:#fff;border:1px solid #c9c9c8;padding:42px 36px;display:flex;flex-direction:column;position:relative}.book-kicker{font:700 8px/1 var(--sans);letter-spacing:.15em;color:var(--soft)}.book-title{font:900 44px/.87 var(--sans);letter-spacing:-.055em;margin:28px 0 12px}.book-sub{font:italic 400 18px/1.17 var(--serif);max-width:250px}.book-axis{margin-top:auto;display:grid;grid-template-columns:1fr auto;align-items:end;gap:10px;font:800 9px/1 var(--sans);letter-spacing:.11em}.book-axis .world{color:var(--signal)}.book-author{font:400 8px/1 var(--sans);letter-spacing:.1em;color:#8b8b8a;margin-top:20px}.quote{padding:92px 0 104px}.quote p{font:900 clamp(48px,6.3vw,88px)/.93 var(--sans);letter-spacing:-.052em;margin:0;max-width:1010px}.quote em{font:italic 400 1em/1 var(--serif);color:var(--signal)}.inside{padding:98px 0 112px}.section-title{font:900 clamp(48px,6.4vw,88px)/.93 var(--sans);letter-spacing:-.052em;margin:0 0 54px;max-width:850px}.inside-row{display:grid;grid-template-columns:230px 1fr;gap:50px;padding:28px 0}.inside-row+.inside-row{border-top:1px solid var(--faint)}.inside-row strong{font:900 20px/1.05 var(--sans)}.inside-row p{font:400 17px/1.58 var(--serif);margin:0;max-width:720px}.free{color:var(--signal)}.case{padding:110px 0 124px;background:#111214;color:#fff}.case .section-title{max-width:970px}.case-lead{font:400 20px/1.55 var(--serif);max-width:760px;color:#d5d5d5;margin:0 0 48px}.case-flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px}.case-flow div{padding-top:8px}.case-flow small{display:block;font:700 10px/1.3 var(--sans);letter-spacing:.11em;color:#8f9093;margin-bottom:12px}.case-flow strong{font:900 23px/1.05 var(--sans);display:block;margin-bottom:10px}.case-flow p{font:400 15px/1.55 var(--serif);margin:0;color:#c7c7c7}.case-end{font:italic 400 30px/1.25 var(--serif);color:#fff;margin:54px 0 0;max-width:760px}.ai{padding:108px 0 122px}.ai .section-title{max-width:980px}.ai-intro{font:400 19px/1.6 var(--serif);max-width:760px;margin:0 0 46px}.framework{display:grid;grid-template-columns:1.05fr 2fr;gap:46px;padding:24px 0}.framework+.framework{border-top:1px solid var(--faint)}.framework strong{font:900 18px/1.1 var(--sans)}.framework p{font:400 16px/1.55 var(--serif);margin:0;max-width:700px}.final{padding:118px 0 130px;text-align:left}.final h2{font:900 clamp(52px,7vw,98px)/.89 var(--sans);letter-spacing:-.06em;margin:0 0 30px;max-width:980px}.final p{font:400 18px/1.58 var(--serif);max-width:740px;margin:0 0 34px}.final .buy{max-width:760px;min-height:92px}.final .buy span{font-size:18px}.final .buy strong{font-size:34px}footer{padding:28px 0 48px;font:400 10px/1.5 var(--sans);color:var(--soft);display:flex;justify-content:space-between;gap:24px}@media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px;min-height:auto;padding-top:54px}.book-zone{order:-1;min-height:500px}.book-cover{width:min(70vw,350px)}.case-flow{grid-template-columns:1fr;gap:34px}}@media(max-width:620px){.shell{width:calc(100% - 28px)}.top{height:56px}.brand{font-size:10px}.top-buy{padding:12px 14px;font-size:10px}.hero{padding:34px 0 64px}.book-zone{min-height:390px}.book-cover{width:min(76vw,300px);padding:32px 26px}.book-title{font-size:36px}.buy{min-height:76px;padding:0 18px}.buy span{font-size:13px}.buy strong{font-size:25px}.inside-row,.framework{grid-template-columns:1fr;gap:12px;padding:22px 0}.quote,.inside,.ai{padding:72px 0}.case{padding:76px 0 84px}.final{padding:82px 0 92px}footer{flex-direction:column}}
 </style>
 </head>
 <body>
-<div class="shell top">
-  <a class="brand" href="#top">THE STRUCTURE OF LIFE</a>
-  <a class="top-buy" href="#buy">BUY $23.33</a>
-</div>
-
+<div class="shell top"><a class="brand" href="#top">THE STRUCTURE OF LIFE</a><a class="top-buy" href="#buy">BUY $23.33</a></div>
 <main id="top">
-  <section class="shell hero">
-    <div class="hero-copy">
-      <div class="eyebrow">A STUDY BOOK ABOUT THE STRUCTURE BENEATH THE ANSWER</div>
-      <h1>The Structure of Life</h1>
-      <p class="hero-line">See what sits underneath a problem before you build the answer.</p>
-      <p class="hero-body">Engineers look for state, limits, links, feedback, memory, failure and change. This book asks which of those patterns also help us understand real life, and exactly where the comparison breaks.</p>
-      <div class="offer-note">BOOK + FREE AI FRAMEWORKS</div>
-      <a class="buy" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=joenasr%40gmail.com&item_name=The%20Structure%20of%20Life%20%7C%20Study%20Book%20%2B%20Free%20AI%20Frameworks&amount=23.33&currency_code=USD&no_shipping=1"><span>BUY THE STUDY BOOK</span><strong>$23.33</strong></a>
-      <div class="includes">160-page study book · 27 chapters · 51 structures · 6 case studies · free AI framework pack</div>
-    </div>
-
-    <div class="book-zone" aria-label="The Structure of Life book cover">
-      <div class="book-cover">
-        <div class="book-kicker">STUDY EDITION</div>
-        <div class="book-title">THE STRUCTURE OF LIFE</div>
-        <div class="book-sub">The Structure of Reasoning</div>
-        <div class="book-axis"><span>MODEL</span><span class="world">WORLD</span></div>
-        <div class="book-author">by J. NASR</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="shell quote">
-    <p>“What life repeats may be the structure your next <em>model</em> is missing.”</p>
-  </section>
-
-  <section class="shell inside">
-    <h2 class="section-title">What you get.</h2>
-    <div class="inside-row"><strong>The study book</strong><p>160 pages built to be studied, marked, questioned and reused. It moves from engineering structure into biology, mind, relationships, organizations and reasoning.</p></div>
-    <div class="inside-row"><strong>51 structures</strong><p>Each one is defined, tested against real examples, given a clear limit, and separated from comparisons that only sound clever.</p></div>
-    <div class="inside-row"><strong>6 case studies</strong><p>Real problems are taken apart from more than one angle so you can see how a different structure changes the answer.</p></div>
-    <div class="inside-row"><strong class="free">Free AI frameworks</strong><p>Five reusable frameworks from the book, written so you can give them to an AI when you want another way to see a problem, test an assumption, or search for a new direction.</p></div>
-  </section>
-
-  <section class="case">
-    <div class="shell">
-      <h2 class="section-title">The same problem can hide different causes.</h2>
-      <p class="case-lead">A team keeps missing deadlines. The visible result is the same. The structure underneath it may not be.</p>
-      <div class="case-flow">
-        <div><small>ONE POSSIBILITY</small><strong>Too much work</strong><p>Reduce the load. If delivery improves, capacity mattered.</p></div>
-        <div><small>ANOTHER</small><strong>One blocked dependency</strong><p>Clear the upstream block. If everything moves, the bottleneck mattered.</p></div>
-        <div><small>ANOTHER</small><strong>Feedback arrives too late</strong><p>Move the feedback earlier. If delivery changes, timing mattered.</p></div>
-      </div>
-      <p class="case-end">Same symptom. Different structure. Different answer.</p>
-    </div>
-  </section>
-
-  <section class="shell ai">
-    <h2 class="section-title">The free AI frameworks are not prompt tricks.</h2>
-    <p class="ai-intro">They are short ways to make an AI look at the same problem from another structure before it settles on the first answer.</p>
-    <div class="framework"><strong>Find the hidden frame</strong><p>Ask what the current question has already assumed, and what it has ruled out before the answer begins.</p></div>
-    <div class="framework"><strong>Build competing explanations</strong><p>Force more than one structure to explain the same result instead of accepting the first plausible story.</p></div>
-    <div class="framework"><strong>Ask what would prove it wrong</strong><p>Turn an idea into something that can fail, not something that only sounds convincing.</p></div>
-    <div class="framework"><strong>Trace repeated failure</strong><p>If the same repair keeps failing, move upstream and inspect the rule, link, limit or assumption producing it.</p></div>
-    <div class="framework"><strong>Reframe before you optimize</strong><p>Change the model when reality keeps disagreeing with it.</p></div>
-  </section>
-
-  <section class="shell final" id="buy">
-    <h2>See the structure before you build the answer.</h2>
-    <p>The Structure of Life gives you the book, the study system, and the free AI frameworks for carrying the same way of thinking into your own questions, ideas and models.</p>
-    <div class="offer-note">BOOK + FREE AI FRAMEWORKS</div>
-    <a class="buy" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=joenasr%40gmail.com&item_name=The%20Structure%20of%20Life%20%7C%20Study%20Book%20%2B%20Free%20AI%20Frameworks&amount=23.33&currency_code=USD&no_shipping=1"><span>BUY THE STUDY BOOK</span><strong>$23.33</strong></a>
-  </section>
+<section class="shell hero"><div class="hero-copy"><div class="eyebrow">A STUDY BOOK ABOUT THE STRUCTURE BENEATH THE ANSWER</div><h1>The Structure of Life</h1><p class="hero-line">See what sits underneath a problem before you build the answer.</p><p class="hero-body">Engineers look for what something is, what limits it, what it depends on, what it remembers, how it reacts, where it fails, and how it changes. This book asks which of those patterns also help us understand real life, and exactly where the comparison breaks.</p><div class="offer-note">BOOK + FREE AI FRAMEWORKS</div><a class="buy" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=joenasr%40gmail.com&item_name=The%20Structure%20of%20Life%20%7C%20Study%20Book%20%2B%20Free%20AI%20Frameworks&amount=23.33&currency_code=USD&no_shipping=1"><span>BUY THE STUDY BOOK</span><strong>$23.33</strong></a><div class="includes">160-page study book · 27 chapters · 51 structures · 6 case studies · free AI framework pack</div></div><div class="book-zone" aria-label="The Structure of Life book cover"><div class="book-cover"><div class="book-kicker">STUDY EDITION</div><div class="book-title">THE STRUCTURE OF LIFE</div><div class="book-sub">The Structure of Reasoning</div><div class="book-axis"><span>MODEL</span><span class="world">WORLD</span></div><div class="book-author">by J. NASR</div></div></div></section>
+<section class="shell quote"><p>“What life repeats may be what your next <em>model</em> is missing.”</p></section>
+<section class="shell inside"><h2 class="section-title">What you get.</h2><div class="inside-row"><strong>The study book</strong><p>160 pages built to be studied, marked, questioned and reused. It moves from engineering structure into biology, mind, relationships, organizations and reasoning.</p></div><div class="inside-row"><strong>51 structures</strong><p>Each one is defined, tested against real examples, given a clear limit, and separated from comparisons that only sound clever.</p></div><div class="inside-row"><strong>6 case studies</strong><p>Real problems are taken apart from more than one angle so you can see how a different structure changes the answer.</p></div><div class="inside-row"><strong class="free">Free AI frameworks</strong><p>Five reusable frameworks from the book, written so you can give them to an AI when you want another way to see a problem, test an assumption, or search for a new direction.</p></div></section>
+<section class="case"><div class="shell"><h2 class="section-title">The same problem can hide different causes.</h2><p class="case-lead">A team keeps missing deadlines. The visible result is the same. The structure underneath it may not be.</p><div class="case-flow"><div><small>ONE POSSIBILITY</small><strong>Too much work</strong><p>Reduce the load. If delivery improves, capacity mattered.</p></div><div><small>ANOTHER</small><strong>One blocked dependency</strong><p>Clear the upstream block. If everything moves, the bottleneck mattered.</p></div><div><small>ANOTHER</small><strong>Feedback arrives too late</strong><p>Move the feedback earlier. If delivery changes, timing mattered.</p></div></div><p class="case-end">Same symptom. Different structure. Different answer.</p></div></section>
+<section class="shell ai"><h2 class="section-title">Five free AI frameworks for seeing another way through the problem.</h2><p class="ai-intro">Give one to an AI when you want it to question the first frame, test another explanation, or look for an idea the first answer missed.</p><div class="framework"><strong>Find the hidden frame</strong><p>Ask what the current question has already assumed, and what it has ruled out before the answer begins.</p></div><div class="framework"><strong>Build competing explanations</strong><p>Force more than one structure to explain the same result instead of accepting the first plausible story.</p></div><div class="framework"><strong>Ask what would prove it wrong</strong><p>Turn an idea into something that can fail, not something that only sounds convincing.</p></div><div class="framework"><strong>Trace repeated failure</strong><p>If the same repair keeps failing, move upstream and inspect the rule, link, limit or assumption producing it.</p></div><div class="framework"><strong>Reframe before you optimize</strong><p>Change the model when reality keeps disagreeing with it.</p></div></section>
+<section class="shell final" id="buy"><h2>See the structure before you build the answer.</h2><p>The book gives you the study system. The free AI frameworks let you carry it into your own questions, ideas and models.</p><div class="offer-note">BOOK + FREE AI FRAMEWORKS</div><a class="buy" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=joenasr%40gmail.com&item_name=The%20Structure%20of%20Life%20%7C%20Study%20Book%20%2B%20Free%20AI%20Frameworks&amount=23.33&currency_code=USD&no_shipping=1"><span>BUY THE STUDY BOOK</span><strong>$23.33</strong></a></section>
 </main>
-
 <footer class="shell"><span>THE STRUCTURE OF LIFE</span><span>by J. NASR</span></footer>
 </body>
 </html>
