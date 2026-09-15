@@ -8,6 +8,13 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
       ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Link", "value": "<https://the-structure-of-life.vercel.app/>; rel=\"canonical\"" },
+        { "key": "X-Robots-Tag", "value": "index, follow, max-image-preview:large" }
+      ]
     }
   ]
 }
