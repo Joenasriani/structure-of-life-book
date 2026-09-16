@@ -2,7 +2,7 @@
 
 Canonical public source for **The Structure of Life — The Structure of Reasoning** study-book page.
 
-**Current canonical release:** 2026-09-16. See [`CANONICAL_RELEASE.md`](./CANONICAL_RELEASE.md). Older public versions using “5 free AI frameworks” as the main offer framing are superseded.
+**Current canonical release:** 2026-09-16. See [`CANONICAL_RELEASE.md`](./CANONICAL_RELEASE.md). Previous public offer variants are superseded.
 
 Production: https://the-structure-of-life.vercel.app/
 
