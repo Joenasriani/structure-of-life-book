@@ -10,7 +10,7 @@ This repository is the canonical public source for the current study-book page.
 - Canonical price: **USD 23.33**
 - Current offer: **160 pages · 27 chapters · 51 structures · 6 case studies · 52 source records · 20-page workbook · structured data · AI reasoning framework · 153 application directions · 24 application concepts**
 
-The current purchase wording is **BOOK + REASONING SYSTEM** / **GET THE STUDY SYSTEM**. Older public versions using **5 free AI frameworks** as the primary offer framing are superseded.
+The current purchase wording is **BOOK + REASONING SYSTEM** / **GET THE STUDY SYSTEM**. Previous offer variants are superseded.
 
 The top-left **REASONING LIBRARY** return control is part of the canonical page and must remain visible.
 
