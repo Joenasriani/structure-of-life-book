@@ -1,0 +1,43 @@
+name: Restore pre-today visible copy only
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/revert-visible-copy-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Restore visible landing-page copy without reverting technical changes
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          replacements = {
+            '160-PAGE STUDY BOOK · 51 STRUCTURES · 52 SOURCE RECORDS': '160-PAGE STUDY BOOK · 51 STRUCTURES · 5 FREE AI FRAMEWORKS',
+            'BOOK + REASONING SYSTEM': 'BOOK + FREE AI FRAMEWORKS',
+            'GET THE STUDY SYSTEM': 'BUY THE BOOK + AI FRAMEWORKS',
+            '27 chapters · 6 case studies · research atlas · 20-page workbook': '27 chapters · 6 case studies · research atlas · study exercises',
+            'GET THE FULL STUDY SYSTEM': 'BUY THE FULL BOOK + AI FRAMEWORKS'
+          }
+          missing = [old for old in replacements if old not in s]
+          if missing:
+            raise SystemExit('Expected current Structure strings not found: ' + repr(missing))
+          for old, new in replacements.items():
+            s = s.replace(old, new, 1)
+          p.write_text(s, encoding='utf-8')
+      - name: Commit restored visible copy and remove one-time workflow
+        run: |
+          git config user.name "Joe Nasr repository maintenance"
+          git config user.email "actions@users.noreply.github.com"
+          git rm .github/workflows/revert-visible-copy-once.yml
+          git add index.html
+          git commit -m "Restore pre-today visible landing copy only"
+          git push
