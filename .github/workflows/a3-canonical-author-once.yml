@@ -1,0 +1,40 @@
+name: A3 canonical author alignment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/a3-canonical-author-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  align:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Align public author entity to canonical Person
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path("index.html")
+          s = p.read_text()
+          person_id = "https://joe-nasr-signals.vercel.app/v2/#joe-nasr"
+          person_url = "https://joe-nasr-signals.vercel.app/v2/"
+          local_id = "https://the-structure-of-life.vercel.app/#author"
+          s = s.replace(local_id, person_id)
+          old = '{"@type":"Person","@id":"' + person_id + '","name":"Joseph Nasr","alternateName":["J. Nasr","Joe Nasr"],"sameAs":["https://linktr.ee/joenasr"]}'
+          new = '{"@type":"Person","@id":"' + person_id + '","name":"Joe Nasr","alternateName":["J. Nasr","Joe Ribal Nasr","Joseph Ribal Nasr"],"url":"' + person_url + '","sameAs":["https://linktr.ee/joenasr","https://github.com/Joenasriani"]}'
+          if old not in s:
+              raise SystemExit("Structure book Person object not found after ID normalization")
+          p.write_text(s.replace(old, new))
+      - name: Remove one-time workflow
+        run: rm .github/workflows/a3-canonical-author-once.yml
+      - name: Commit A3 alignment
+        run: |
+          git config user.name "Joe Nasr repository maintenance"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html .github/workflows/a3-canonical-author-once.yml
+          git commit -m "Align Structure book author with canonical Joe Nasr identity"
+          git push
