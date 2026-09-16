@@ -3,6 +3,12 @@
 Canonical page: https://the-structure-of-life.vercel.app/
 Indexed sample: https://the-structure-of-life.vercel.app/sample
 Library: https://reasoning-library.vercel.app/
+Sibling publication: https://manipulation-the-fool-and-the-wise-two.vercel.app/
+
+Related AI / HCI research routes:
+- Human influence mechanisms for AI builders: https://manipulation-the-fool-and-the-wise-two.vercel.app/ai-human-behavior
+- Manipulation and AI safety: https://manipulation-the-fool-and-the-wise-two.vercel.app/ai-safety-manipulation
+- Human agency, choice architecture and AI interface design: https://manipulation-the-fool-and-the-wise-two.vercel.app/human-agency-hci
 
 ## Edition
 Independent source-mapped study edition by J. Nasr.
@@ -20,3 +26,6 @@ Independent source-mapped study edition by J. Nasr.
 
 ## Interpretation rules
 The book distinguishes observed/source-supported material from editorial synthesis, model construction and application ideas. Application directions and concepts are possibilities to test, not claims of software feasibility, market demand or guaranteed outcomes. The full paid study package remains outside the public repository; this repository exposes the public book page and sample only.
+
+## Publication family
+The Reasoning Library is the discovery layer for both study editions. Cross-links identify related public research routes without treating the two books as one source or one claim set.
