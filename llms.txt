@@ -1,0 +1,22 @@
+# The Structure of Life — The Structure of Reasoning
+
+Canonical page: https://the-structure-of-life.vercel.app/
+Indexed sample: https://the-structure-of-life.vercel.app/sample
+Library: https://reasoning-library.vercel.app/
+
+## Edition
+Independent source-mapped study edition by J. Nasr.
+
+- 160-page study book
+- 27 chapters
+- 51 structures
+- 6 case studies
+- 52 source records
+- 20-page workbook
+- structured data and AI reasoning framework
+- 153 application directions
+- 24 application concepts
+- canonical price: USD 23.33
+
+## Interpretation rules
+The book distinguishes observed/source-supported material from editorial synthesis, model construction and application ideas. Application directions and concepts are possibilities to test, not claims of software feasibility, market demand or guaranteed outcomes. The full paid study package remains outside the public repository; this repository exposes the public book page and sample only.
