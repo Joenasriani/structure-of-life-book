@@ -2,11 +2,15 @@
 
 Canonical public source for **The Structure of Life — The Structure of Reasoning** study-book page.
 
-**Current canonical release:** 2026-09-16. See [`CANONICAL_RELEASE.md`](./CANONICAL_RELEASE.md). Previous public offer variants are superseded.
+**Current canonical release:** 2026-09-17. See [`CANONICAL_RELEASE.md`](./CANONICAL_RELEASE.md). Previous public offer variants are superseded.
 
 Production: https://the-structure-of-life.vercel.app/
 
 Public sample: https://the-structure-of-life.vercel.app/sample
+
+Public methodology: https://the-structure-of-life.vercel.app/methodology
+
+Terms & delivery: https://the-structure-of-life.vercel.app/terms
 
 Library: https://reasoning-library.vercel.app/
 
@@ -53,7 +57,7 @@ The AI signal is earned through the book itself: state, constraint, memory, feed
 
 ## Public / private boundary
 
-This repository contains the public landing page, public sample, discovery metadata and search configuration.
+This repository contains the public landing page, public sample, methodology, terms/delivery information, discovery metadata and search configuration.
 
 Do not commit paid full-content PDFs/EPUBs, customer study ZIPs, private production notes, credentials, customer/payment records or private fulfilment material to this public repository.
 
