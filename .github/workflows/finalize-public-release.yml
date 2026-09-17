@@ -1,0 +1,57 @@
+name: Finalize public release copy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/finalize-public-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize canonical publication copy
+        shell: python
+        run: |
+          from pathlib import Path
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          replacements = {
+              '"dateModified":"2026-09-16"': '"dateModified":"2026-09-17"',
+              '160-PAGE STUDY BOOK · 51 STRUCTURES · 5 FREE AI FRAMEWORKS': '160-PAGE STUDY BOOK · 51 STRUCTURES · AI REASONING FRAMEWORK',
+              'BOOK + FREE AI FRAMEWORKS': 'BOOK + AI REASONING FRAMEWORK',
+              'BUY THE BOOK + AI FRAMEWORKS': 'BUY THE STUDY SYSTEM',
+              'BUY THE FULL BOOK + AI FRAMEWORKS': 'BUY THE STUDY SYSTEM',
+          }
+          for old, new in replacements.items():
+              if old not in s:
+                  raise SystemExit(f'Expected source string not found: {old}')
+              s = s.replace(old, new)
+
+          anchor = '<div class="under-actions"><a class="sample-open" href="/sample">SAMPLE READ — SEE THE BOOK FIRST</a><div class="facts">27 chapters · 6 case studies · research atlas · study exercises</div></div>'
+          if anchor not in s:
+              raise SystemExit('Under-actions anchor not found')
+          delivery = anchor + '\n<p class="facts">Secure checkout via PayPal · Digital edition delivered by email after payment verification · <a href="/terms">Terms &amp; delivery</a></p>'
+          s = s.replace(anchor, delivery, 1)
+          p.write_text(s, encoding='utf-8')
+
+          sm = Path('sitemap.xml')
+          x = sm.read_text(encoding='utf-8')
+          if '/terms' not in x:
+              entry = '  <url>\n    <loc>https://the-structure-of-life.vercel.app/terms</loc>\n    <lastmod>2026-09-17</lastmod>\n  </url>\n'
+              x = x.replace('</urlset>', entry + '</urlset>')
+              sm.write_text(x, encoding='utf-8')
+
+      - name: Commit normalized release source
+        run: |
+          git config user.name "BOOKSTORE Release"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html sitemap.xml
+          git diff --cached --check
+          git commit -m "Finalize Structure of Life public release copy"
+          git push
