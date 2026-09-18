@@ -54,6 +54,13 @@ Canonical archive:
 
 Public Free Sample remains separate and is not counted as a paid archive component.
 
+## Publication-support package
+
+Canonical support archive: `The_Structure_of_Life_Publication_Assets_2026-09.zip`  
+SHA-256: `5816307a0ba4b8fe04d30db99319ef6de3a8dd2a9e5020e6fb93e922bdc5587d`
+
+This archive contains the audited START HERE document, AI Reasoning Framework, Licence & Usage, Edition Notes, manifest and integrity hashes. It is a companion publication asset set; it does not substitute for the complete Buyer Edition archive.
+
 ## Archive structure
 
 ```text
