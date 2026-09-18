@@ -33,7 +33,7 @@ Private buyer release: full paid book, EPUB, workbook, research/registers, AI fr
 
 Canonical GitHub source has been redeployed.
 
-Production deployment `dpl_6ZtUcHeMgWBKbEDnDYCkEDPRxLAu` is READY, production target, no alias error.
+Production deployment `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF` is READY, production target, no alias error.
 
 Verified HTTP 200:
 - `/`
