@@ -44,11 +44,11 @@ Canonical archive:
 | Source Register | `The_Structure_of_Life_Source_Register_2026-09.csv` | **FINAL BUYER BINARY UNRESOLVED** — documented as 52 source records |
 | Structured Knowledge Register (CSV) | `The_Structure_of_Life_Structured_Knowledge_Register_2026-09.csv` | **FINAL BUYER BINARY UNRESOLVED** |
 | Structured Knowledge Register (JSON) | `The_Structure_of_Life_Structured_Knowledge_Register_2026-09.json` | **FINAL BUYER BINARY UNRESOLVED** |
-| AI Reasoning Framework | `The_Structure_of_Life_AI_Reasoning_Framework_2026-09.md` | **ISSUED AS RELEASE-CANDIDATE SOURCE** |
-| AI Reasoning Framework text copy | `The_Structure_of_Life_AI_Reasoning_Framework_2026-09.txt` | **ISSUED AS RELEASE-CANDIDATE SOURCE** |
-| Buyer Guide | `The_Structure_of_Life_Buyer_Guide_2026-09.md` | **ISSUED AS RELEASE-CANDIDATE SOURCE** |
-| Licence & Usage | `The_Structure_of_Life_Licence_and_Usage_2026-09.txt` | **ISSUED AS RELEASE-CANDIDATE SOURCE** |
-| Edition Notes | `The_Structure_of_Life_Edition_Notes_2026-09.txt` | **ISSUED AS RELEASE-CANDIDATE SOURCE** |
+| AI Reasoning Framework | `The_Structure_of_Life_AI_Reasoning_Framework_2026-09.md` | **PUBLICATION ASSET GENERATED AND AUDITED** |
+| AI Reasoning Framework text copy | `The_Structure_of_Life_AI_Reasoning_Framework_2026-09.txt` | **PUBLICATION ASSET GENERATED AND AUDITED** |
+| Buyer Guide | `START_HERE.pdf` | **PUBLICATION ASSET GENERATED AND AUDITED** |
+| Licence & Usage | `License_and_Usage.pdf` | **PUBLICATION ASSET GENERATED AND AUDITED** |
+| Edition Notes | `Edition_Notes.pdf` | **PUBLICATION ASSET GENERATED AND AUDITED** |
 | Release Manifest | `RELEASE_MANIFEST.json` | **GENERATE AFTER FINAL BUYER BYTES LOCK** |
 | Checksums | `SHA256SUMS.txt` | **GENERATE AFTER FINAL BUYER BYTES LOCK** |
 
