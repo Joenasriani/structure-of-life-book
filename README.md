@@ -14,13 +14,13 @@ Terms & delivery: https://the-structure-of-life.vercel.app/terms
 
 Library: https://reasoning-library.vercel.app/
 
-Sibling publication: https://manipulation-the-fool-and-the-wise-two.vercel.app/
+Sibling publication: https://manipulation-book.vercel.app/
 
 Related AI / HCI research routes from the Manipulation study edition:
 
-- Human influence mechanisms for AI builders: https://manipulation-the-fool-and-the-wise-two.vercel.app/ai-human-behavior
-- Manipulation and AI safety: https://manipulation-the-fool-and-the-wise-two.vercel.app/ai-safety-manipulation
-- Human agency, choice architecture and AI interface design: https://manipulation-the-fool-and-the-wise-two.vercel.app/human-agency-hci
+- Human influence mechanisms for AI builders: https://manipulation-book.vercel.app/ai-human-behavior
+- Manipulation and AI safety: https://manipulation-book.vercel.app/ai-safety-manipulation
+- Human agency, choice architecture and AI interface design: https://manipulation-book.vercel.app/human-agency-hci
 
 ## Edition
 
