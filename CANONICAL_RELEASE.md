@@ -11,7 +11,7 @@ This repository is the canonical public source for the study-book page.
 - Terms: `https://the-structure-of-life.vercel.app/terms`
 - Canonical price: **USD 23.33**
 - Canonical public identity: **Independent Source-Mapped Study Edition**
-- Production deployment: `dpl_BJNGu3nzyhqxuSxmtSoGqrJVju8c`
+- Production deployment: `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF`
 - Publication manifest: `/PUBLISHING_RELEASE_MANIFEST.md`
 
 ## Canonical documented offer
