@@ -87,7 +87,7 @@ Do not ship seller-facing website/deployment files, obsolete marketing kits, int
 
 ## Public production verification — 2026-09-18
 
-Production deployment `dpl_BJNGu3nzyhqxuSxmtSoGqrJVju8c` is READY.
+Production deployment `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF` is READY.
 
 Verified HTTP 200:
 - root;
