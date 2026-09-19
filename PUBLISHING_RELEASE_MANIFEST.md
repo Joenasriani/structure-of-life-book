@@ -1,126 +1,61 @@
 # The Structure of Life — The Structure of Reasoning
-## Canonical Publication Manifest
 
-Control date: **2026-09-18**  
-Author: **J. Nasr**  
-Edition: **Study Edition — September 2026**  
-Canonical price: **USD 23.33**  
-Canonical public page: `https://the-structure-of-life.vercel.app/`
+## Buyer edition manifest — 2026-09-19
 
-## Canonical documented offer
+Author: **J. Nasr**. Reading edition: **September 2026 Study Edition**. Price: **USD 23.33**. Product ID: `STRUCTURE-2026-09`.
 
-- 160-page study book
-- 27 chapters
-- 51 structures
-- 6 case studies
-- 52 source records
-- 20-page workbook
-- structured data
-- one **AI Reasoning Framework**
-- 153 application directions
-- 24 application concepts
+**FILES ASSEMBLED AND INTEGRITY-CHECKED. DEPLOYMENT AND PAYMENT-TO-RECEIPT VERIFICATION REMAIN PENDING.**
 
-The phrase **“5 free AI frameworks”** is superseded and must not appear in canonical public or buyer copy unless five separately defined, physically present publication objects are later locked.
+Archive: `The_Structure_of_Life_Buyer_Edition_2026-09.zip`
 
-## Canonical commercial delivery
+Files: **21**; ZIP integrity: **PASS**; password: **none**.
 
-Buyer delivery:
-1. PDF direct;
-2. EPUB direct where produced;
-3. complete Buyer Edition ZIP;
-4. START HERE / Buyer Guide.
+Archive SHA-256: `f20240583f73a428eca10470b5ad4cb58e7b1a3b1b426b4fe965bca6a9ce377a`.
 
-Canonical archive:
-`The_Structure_of_Life_Buyer_Edition_2026-09.zip`
+The exact book PDF, EPUB and workbook are preserved from `The_Structure_of_Life_Study_Package.zip` (SHA-256 `8ccfd7c5d953ee6f3f53f9b327064341ca39b312e09466e91c40eb51f68dff5a`). Direct buyer PDF/EPUB files must be these same bytes.
 
-## Canonical buyer package
+## Complete shipped inventory
 
-| Object | Canonical buyer filename | Verification state |
-|---|---|---|
-| Main Book | `The_Structure_of_Life_Study_Edition_2026-09.pdf` | **FINAL BUYER BINARY UNRESOLVED** |
-| EPUB | `The_Structure_of_Life_Study_Edition_2026-09.epub` | **FINAL BUYER BINARY UNRESOLVED** |
-| Study Workbook | `The_Structure_of_Life_Study_Workbook_2026-09.pdf` | **FINAL BUYER BINARY UNRESOLVED** — documented as 20 pages |
-| Research Atlas | `The_Structure_of_Life_Research_Atlas_2026-09.pdf` | **FINAL BUYER BINARY UNRESOLVED** |
-| Source Register | `The_Structure_of_Life_Source_Register_2026-09.csv` | **FINAL BUYER BINARY UNRESOLVED** — documented as 52 source records |
-| Structured Knowledge Register (CSV) | `The_Structure_of_Life_Structured_Knowledge_Register_2026-09.csv` | **FINAL BUYER BINARY UNRESOLVED** |
-| Structured Knowledge Register (JSON) | `The_Structure_of_Life_Structured_Knowledge_Register_2026-09.json` | **FINAL BUYER BINARY UNRESOLVED** |
-| AI Reasoning Framework | `The_Structure_of_Life_AI_Reasoning_Framework_2026-09.md` | **PUBLICATION ASSET GENERATED AND AUDITED** |
-| AI Reasoning Framework text copy | `The_Structure_of_Life_AI_Reasoning_Framework_2026-09.txt` | **PUBLICATION ASSET GENERATED AND AUDITED** |
-| Buyer Guide | `START_HERE.pdf` | **PUBLICATION ASSET GENERATED AND AUDITED** |
-| Licence & Usage | `License_and_Usage.pdf` | **PUBLICATION ASSET GENERATED AND AUDITED** |
-| Edition Notes | `Edition_Notes.pdf` | **PUBLICATION ASSET GENERATED AND AUDITED** |
-| Release Manifest | `RELEASE_MANIFEST.json` | **GENERATE AFTER FINAL BUYER BYTES LOCK** |
-| Checksums | `SHA256SUMS.txt` | **GENERATE AFTER FINAL BUYER BYTES LOCK** |
+| File inside ZIP | Check |
+|---|---|
+| `00_START_HERE/START_HERE.pdf` | 1 page; opens; not encrypted |
+| `01_BOOK/The_Structure_of_Life_Study_Edition_2026-09.epub` | Container, resources and spine pass; EPUBCheck not run |
+| `01_BOOK/The_Structure_of_Life_Study_Edition_2026-09.pdf` | 160 pages; opens; not encrypted |
+| `02_STUDY/The_Structure_of_Life_Study_Workbook_2026-09.pdf` | 20 pages; opens; not encrypted |
+| `03_RESEARCH/Claim_Audit.csv` | Present; SHA-256 recorded |
+| `03_RESEARCH/Cross_Links.csv` | Present; SHA-256 recorded |
+| `03_RESEARCH/Negative_Ontology.csv` | Present; SHA-256 recorded |
+| `03_RESEARCH/Research_Gaps.csv` | Present; SHA-256 recorded |
+| `03_RESEARCH/The_Structure_of_Life_Research_Atlas_2026-09.pdf` | 74 pages; opens; not encrypted |
+| `03_RESEARCH/The_Structure_of_Life_Source_Register_2026-09.csv` | 52 records; CSV/JSON match |
+| `03_RESEARCH/The_Structure_of_Life_Source_Register_2026-09.json` | 52 records; CSV/JSON match |
+| `04_MACHINE_READABLE/The_Structure_of_Life_Structured_Knowledge_Register_2026-09.csv` | 51 entries; CSV/JSON match |
+| `04_MACHINE_READABLE/The_Structure_of_Life_Structured_Knowledge_Register_2026-09.json` | 51 entries; CSV/JSON match |
+| `05_AI/The_Structure_of_Life_AI_Reasoning_Framework_2026-09.md` | One framework, two equivalent reading formats |
+| `05_AI/The_Structure_of_Life_AI_Reasoning_Framework_2026-09.txt` | One framework, two equivalent reading formats |
+| `06_APPLICATIONS/AI_Application_Directions.csv` | 153 application directions |
+| `06_APPLICATIONS/AI_Product_Concepts.csv` | 24 application concepts |
+| `90_TERMS/Edition_Notes.pdf` | 1 page; opens; not encrypted |
+| `90_TERMS/License_and_Usage.pdf` | 1 page; opens; not encrypted |
+| `RELEASE_MANIFEST.json` | Exact edition, source identity, per-file sizes and SHA-256 values |
+| `SHA256SUMS.txt` | Every other shipped file, including the manifest |
 
-Public Free Sample remains separate and is not counted as a paid archive component.
+The manifest/checksum files cannot include their own cryptographic hashes. The independently recorded archive hash covers the entire ZIP.
 
-## Publication-support package
+## Edition identity and research boundaries
 
-Canonical support archive: `The_Structure_of_Life_Publication_Assets_2026-09.zip`  
-SHA-256: `5816307a0ba4b8fe04d30db99319ef6de3a8dd2a9e5020e6fb93e922bdc5587d`
+The reading edition is **160 pages**. Its research companion is **74 pages**, with a **20-page** workbook, **52** source records and **51** structured entries. The separately recovered 124-page variant is not shipped.
 
-This archive contains the audited START HERE document, AI Reasoning Framework, Licence & Usage, Edition Notes, manifest and integrity hashes. It is a companion publication asset set; it does not substitute for the complete Buyer Edition archive.
+The AI Reasoning Framework is one method supplied in Markdown and plain text. Evidence status and cross-domain transfer are distinct fields. The 153 application directions and 24 concepts are exploratory proposals, not validated software or market evidence.
 
-## Archive structure
+The current AI framework and licence came from the publication-support package. The buyer guide and edition notes were updated to match the actual files. The older support ZIP is not a complete buyer product.
 
-```text
-00_START_HERE/
-01_BOOK/
-02_STUDY/
-03_RESEARCH/
-04_MACHINE_READABLE/
-05_AI/
-06_APPLICATIONS/  (only audited intentional application material)
-90_TERMS/
-RELEASE_MANIFEST.json
-SHA256SUMS.txt
-```
+## Scope of verification
 
-## AI Reasoning Framework identity
+All ZIP CRCs passed, every PDF opened without encryption, expected page/row counts matched, CSV/JSON pairs matched, and cited R/M identifiers resolved in the Source Register. EPUB container, XML, packaged resources and spine references passed; full EPUBCheck was not run. New reader PDFs were visually inspected. This packaging audit is not a new independent validation of every scientific claim or citation URL.
 
-The canonical AI object is one **AI Reasoning Framework**, not a generic prompt bundle:
-1. Name the current representation.
-2. State what it omitted.
-3. Generate competing structural frames.
-4. Preserve evidence and transfer status.
-5. Name discriminating evidence.
-6. Reframe or stop.
+## Delivery and remaining release gate
 
-Similarity is not proof of causal equivalence.
+Deliver the PDF, EPUB, full ZIP and START HERE guide privately after verifying a completed payment in the merchant account. Product, recipient, USD 23.33, currency, transaction uniqueness and buyer email must match. A PayPal return-page visit is not proof of payment. No automatic delivery service is configured.
 
-## Buyer-package exclusions
-
-Do not ship seller-facing website/deployment files, obsolete marketing kits, internal production notes, duplicate drafts, credentials/customer data, or the public Free Sample merely because those files exist.
-
-## Public production verification — 2026-09-18
-
-Production deployment `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF` is READY.
-
-Verified HTTP 200:
-- root;
-- `/sample`;
-- `/methodology`;
-- `/terms`;
-- `/sitemap.xml`;
-- `/robots.txt`.
-
-Current live root now reflects the canonical single **AI Reasoning Framework** identity; obsolete plural-framework sales language is retired from production.
-
-## Current release status
-
-**PUBLIC SOURCE + PRODUCTION LOCKED / PAID BUYER BYTES NOT YET FULLY LOCKED.**
-
-Remaining commercial blockers:
-1. Recover/rebuild exact 160-page PDF and validate it.
-2. Recover/rebuild exact EPUB and validate metadata/navigation.
-3. Recover/rebuild exact 20-page workbook.
-4. Recover/rebuild Research Atlas.
-5. Recover/rebuild 52-record Source Register.
-6. Recover/rebuild Structured Knowledge CSV/JSON.
-7. Validate the 153 application directions / 24 concepts against the final authoritative source.
-8. Assemble final Buyer Edition ZIP and generate exact manifest/checksums.
-9. Test successful payment-to-delivery/access end to end.
-
-## BOOK LOCK gate
-
-Do not call the paid commercial package BOOK LOCKED until all promised files physically exist, exact hashes are recorded, public copy matches delivered contents and payment-to-delivery/access passes.
+Remaining: deploy the prepared source, verify the live product mapping and checkout, complete an authorized payment, and confirm actual receipt of these files. Full paid files, customer data and private fulfilment records must not be committed to the public repository. The public sample remains separate.

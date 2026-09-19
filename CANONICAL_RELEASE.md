@@ -1,56 +1,35 @@
-# Canonical Release State — 2026-09-18
+# Canonical source and buyer files — 2026-09-19
 
-**The Structure of Life — The Structure of Reasoning**
+**The Structure of Life — The Structure of Reasoning**, by J. Nasr.
 
-This repository is the canonical public source for the study-book page.
+| Destination | Canonical URL |
+|---|---|
+| Book | https://the-structure-of-life.vercel.app/ |
+| Store | https://reasoning-library.vercel.app/ |
+| Sample | https://the-structure-of-life.vercel.app/sample |
+| Methodology | https://the-structure-of-life.vercel.app/methodology |
+| Terms | https://the-structure-of-life.vercel.app/terms |
+| Checkout, after deployment | https://the-structure-of-life.vercel.app/api/buy |
+| Delivery information, after deployment | https://the-structure-of-life.vercel.app/delivery |
 
-- Production page: `https://the-structure-of-life.vercel.app/`
-- Library: `https://reasoning-library.vercel.app/`
-- Public sample: `https://the-structure-of-life.vercel.app/sample`
-- Methodology: `https://the-structure-of-life.vercel.app/methodology`
-- Terms: `https://the-structure-of-life.vercel.app/terms`
-- Canonical price: **USD 23.33**
-- Canonical public identity: **Independent Source-Mapped Study Edition**
-- Production deployment: `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF`
-- Publication manifest: `/PUBLISHING_RELEASE_MANIFEST.md`
+The intended offer is USD 23.33 for the 160-page Study Edition, EPUB, 20-page workbook, 74-page Research Atlas, 52 source records, 51 structured entries, one AI Reasoning Framework, 153 application directions and 24 concepts. The application materials are proposals, not validated products.
 
-## Canonical documented offer
+## Buyer files
 
-**160 pages · 27 chapters · 51 structures · 6 case studies · 52 source records · 20-page workbook · structured data · AI Reasoning Framework · 153 application directions · 24 application concepts**
+The 21-file Buyer Edition archive is assembled and integrity-checked. Main PDF, EPUB and workbook bytes are preserved from the source Study Package. Exact file identity and the archive SHA-256 are recorded in `PUBLISHING_RELEASE_MANIFEST.md` and `releases/2026-09/buyer-packages.json`. Container, resource and spine checks passed for the EPUB; full EPUBCheck was not run.
 
-The canonical machine/AI component is one **AI Reasoning Framework**. Do not advertise five unrelated AI frameworks unless five separately defined, delivered artifacts are later locked.
+Deliver the PDF and EPUB individually as well as the complete ZIP and buyer guide. Paid files remain outside this public repository.
 
-## Buyer delivery rule
+## Deployment and payment status
 
-A completed sale should expose the canonical PDF and EPUB directly for immediate reading and also provide the complete Buyer Edition ZIP containing the canonical book, study, research, machine-readable, AI and terms layers.
+**SOURCE REPAIRS PREPARED; DEPLOYMENT AND END-TO-END PAYMENT/RECEIPT REMAIN PENDING.**
 
-## Public/private rule
+The last inspected production deployment is `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF`, created September 18. Root, sample, methodology, terms, robots and sitemap were reachable. That does not prove checkout or delivery.
 
-Public repository: website, verification/sample/methodology/terms and release documentation.  
-Private buyer release: full paid book, EPUB, workbook, research/registers, AI framework and Buyer Edition archive.
+Source purchase links now use one fixed `/api/buy` route with product ID `STRUCTURE-2026-09`, the existing merchant recipient and USD 23.33. The `/delivery` return page explains manual fulfilment and never confirms payment based on a page visit. The existing live checkout encountered PayPal verification; a successful payment was not tested.
 
-## Production verification — 2026-09-18
+The shared manual deployment workflow is in `Joenasriani/test-things`. Its last inspected run lacked `VERCEL_TOKEN`, and the deployment connector was unavailable. After deployment, run its production verification step, then complete an authorized payment-to-receipt test.
 
-Canonical GitHub source has been redeployed.
+Delivery remains manual after verification in the merchant account. There is no automated delivery integration. Do not describe the commercial journey as fully verified until deployment, payment and private buyer receipt have passed.
 
-Production deployment `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF` is READY, production target, no alias error.
-
-Verified HTTP 200:
-- `/`
-- `/sample`
-- `/methodology`
-- `/terms`
-- `/sitemap.xml`
-- `/robots.txt`
-
-The obsolete **5 FREE AI FRAMEWORKS** live root has been replaced by the current one-framework canonical publication identity.
-
-## Commercial-package status
-
-**PUBLIC SOURCE + PRODUCTION LOCKED / COMPLETE BUYER PACKAGE NOT YET BYTE-LOCKED.**
-
-The full 160-page PDF, EPUB, 20-page workbook, Research Atlas, Source Register and Structured Knowledge Register exact buyer binaries remain to be recovered/rebuilt from authoritative source materials and checksum-audited before commercial BOOK LOCK.
-
-## Navigation and blocker-resilience
-
-The top-left **REASONING LIBRARY** return control remains part of the canonical page. Critical navigation, sample and purchase actions must use ordinary HTML links and not depend on advertising/tracking infrastructure.
+Keep the original book design, single-framework identity, ordinary HTML navigation and return-to-library control.
