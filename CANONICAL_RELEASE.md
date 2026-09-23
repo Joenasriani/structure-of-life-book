@@ -1,3 +1,16 @@
+# Canonical production map lock — 2026-09-23
+
+This repository is the only canonical GitHub source for The Structure of Life.
+
+- GitHub: `Joenasriani/structure-of-life-book`
+- Branch: `main`
+- Vercel project: `the-structure-of-life`
+- Vercel project ID: `prj_tnA6mm9ivIayBSUAfLRxIiTxtYzb`
+- Public URL: https://the-structure-of-life.vercel.app/
+- Store: https://reasoning-library.vercel.app/
+
+Any preview deployment, copied project or alternate URL is noncanonical unless a later confirmed release change explicitly replaces this mapping.
+
 # Canonical source and buyer files — 2026-09-19
 
 **The Structure of Life — The Structure of Reasoning**, by J. Nasr.
