@@ -8,9 +8,9 @@ Author: **J. Nasr**. Reading edition: **September 2026 Study Edition**. Price: *
 
 Archive: `The_Structure_of_Life_Buyer_Edition_2026-09.zip`
 
-Files: **21**; ZIP integrity: **PASS**; password: **none**.
+Files: **21**; ZIP integrity: **PASS**; password: **none**. Rebuilt and reverified **2026-09-24**.
 
-Archive SHA-256: `f20240583f73a428eca10470b5ad4cb58e7b1a3b1b426b4fe965bca6a9ce377a`.
+Archive SHA-256: `3b7cea4d9df34182869b90a093ce5c7c1343ae885b38a4543a0d66868489b965`.
 
 The exact book PDF, EPUB and workbook are preserved from `The_Structure_of_Life_Study_Package.zip` (SHA-256 `8ccfd7c5d953ee6f3f53f9b327064341ca39b312e09466e91c40eb51f68dff5a`). Direct buyer PDF/EPUB files must be these same bytes.
 
@@ -52,7 +52,7 @@ The current AI framework and licence came from the publication-support package. 
 
 ## Scope of verification
 
-All ZIP CRCs passed, every PDF opened without encryption, expected page/row counts matched, CSV/JSON pairs matched, and cited R/M identifiers resolved in the Source Register. EPUB container, XML, packaged resources and spine references passed; full EPUBCheck was not run. New reader PDFs were visually inspected. This packaging audit is not a new independent validation of every scientific claim or citation URL.
+All ZIP CRCs passed, every PDF opened without encryption, expected page/row counts matched, CSV/JSON pairs matched, and cited R/M identifiers resolved in the Source Register. EPUB container, XML, packaged resources and spine references passed again on 2026-09-24; full EPUBCheck was not run. New reader PDFs were visually inspected. This packaging audit is not a new independent validation of every scientific claim or citation URL.
 
 ## Delivery and remaining release gate
 
