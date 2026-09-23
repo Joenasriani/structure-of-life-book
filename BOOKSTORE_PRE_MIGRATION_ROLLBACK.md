@@ -58,3 +58,23 @@ Production deployment at snapshot: `dpl_FSGUfFuFi2CwCkrqDqKssobn8pgF`
 5. During rollback, source identity takes precedence over later naming cleanup.
 6. After restoring Git refs, verify root, sample, methodology, terms, checkout, delivery, robots, sitemap, canonical metadata, and public assets before declaring rollback complete.
 7. Payment acceptance and private buyer receipt remain separate operational checks.
+
+
+## Preserved legacy Vercel state
+
+Do not delete these during migration. They are not canonical production targets, but they existed at the rollback point and are part of the reversible state.
+
+### RoboMarket team
+Team ID: `team_aK7orsaNw316c1bdLjjKFVMy`
+
+- `manipulation-the-fool-and-the-wise` — `prj_zaxPuXKECKueD8BcvBEqR7nbzpuF`
+- `manipulation-the-fool-and-the-wise-v2` — `prj_enAbuUeWubH2zaeKIcb8komOlIZZ`
+
+### The Testers 101 team
+Team ID: `team_UgFTpDoLICV1eYAWYMLazes4`
+
+- `manipulation-the-fool-and-the-wise` — `prj_qbJJt9RHtyfiLgxsrotDaNSododz`
+- `manipulation-responsive-test` — `prj_pPfIqdweuhIh13o0e6f6Uo5izZMo`
+- `manipulation-fix-test` — `prj_g4n1C4kZSSAkE9cdoE6Kf8eP0Ggp`
+
+These legacy projects may be retired only after the canonical migration has passed final verification and the user explicitly approves retirement.
