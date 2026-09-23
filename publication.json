@@ -32,7 +32,7 @@
     "return_path": "/delivery",
     "cancel_path": "/",
     "verification": "not_completed",
-    "hosted_url": null
+    "hosted_url": "https://www.paypal.com/ncp/payment/TG4UCZB7UXJJY"
   },
   "release": {
     "product_id": "STRUCTURE-2026-09",
