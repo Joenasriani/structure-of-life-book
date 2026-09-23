@@ -31,7 +31,8 @@
     "currency": "USD",
     "return_path": "/delivery",
     "cancel_path": "/",
-    "verification": "not_completed"
+    "verification": "not_completed",
+    "hosted_url": null
   },
   "release": {
     "product_id": "STRUCTURE-2026-09",
@@ -84,7 +85,7 @@
     "theme": "structure",
     "coverStyle": "structure",
     "coreIdea": "Structures from coding and engineering can expose hidden causes, missing variables",
-    "storeLine": "160-page study book · 51 structures · 6 case studies · 20-page workbook · AI reasoning framework"
+    "storeLine": "160-page study book \u00b7 51 structures \u00b7 6 case studies \u00b7 20-page workbook \u00b7 AI reasoning framework"
   },
   "assets": [],
   "source_evidence": {
