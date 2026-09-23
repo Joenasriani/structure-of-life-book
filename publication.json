@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "id": "the-structure-of-life",
+  "kind": "book",
+  "title": "The Structure of Life",
+  "subtitle": "The Structure of Reasoning",
+  "author": "J. Nasr",
+  "edition": "September 2026 Study Edition",
+  "publication_status": "published_study_edition",
+  "canonical_url": "https://the-structure-of-life.vercel.app/",
+  "catalogue_url": "https://reasoning-library.vercel.app/",
+  "repository": {
+    "current": "Joenasriani/structure-of-life-book",
+    "target": "Joenasriani/structure-of-life-book",
+    "migration_status": "prepared_not_switched"
+  },
+  "deployment": {
+    "provider": "vercel",
+    "project_id": "prj_tnA6mm9ivIayBSUAfLRxIiTxtYzb",
+    "team_id": "team_aK7orsaNw316c1bdLjjKFVMy",
+    "root_directory": ".",
+    "status": "replacement_not_deployed"
+  },
+  "checkout": {
+    "provider": "paypal",
+    "endpoint": "/api/buy",
+    "merchant": "joenasr@gmail.com",
+    "product_id": "STRUCTURE-2026-09",
+    "item_name": "The Structure of Life - The Structure of Reasoning | Buyer Edition",
+    "amount": "23.33",
+    "currency": "USD",
+    "return_path": "/delivery",
+    "cancel_path": "/",
+    "verification": "not_completed"
+  },
+  "release": {
+    "product_id": "STRUCTURE-2026-09",
+    "title": "The Structure of Life - The Structure of Reasoning",
+    "price": "23.33",
+    "currency": "USD",
+    "archive": "The_Structure_of_Life_Buyer_Edition_2026-09.zip",
+    "archive_sha256": "f20240583f73a428eca10470b5ad4cb58e7b1a3b1b426b4fe965bca6a9ce377a",
+    "file_count": 21,
+    "book_pages": 160,
+    "source_records": 52,
+    "structured_entries": 51,
+    "epubcheck": "NOT_RUN",
+    "archive_verification": "recorded_in_prior_manifest_not_rechecked",
+    "private_archive_location": null,
+    "payment_to_receipt": "not_completed"
+  },
+  "description": "An independent source-mapped study edition on systems thinking, reasoning, framing and causal models. The study system includes 51 structures, six case studies, 52 source records, a 20-page workbook, structured data and an AI reasoning framework.",
+  "keywords": "systems thinking, reasoning, framing, causal models, constraints, feedback, path dependence, problem solving, AI reasoning",
+  "routes": [
+    {
+      "path": "/delivery",
+      "file": "delivery.html",
+      "indexable": false
+    },
+    {
+      "path": "/",
+      "file": "index.html",
+      "indexable": true
+    },
+    {
+      "path": "/methodology",
+      "file": "methodology.html",
+      "indexable": true
+    },
+    {
+      "path": "/sample",
+      "file": "sample.html",
+      "indexable": true
+    },
+    {
+      "path": "/terms",
+      "file": "terms.html",
+      "indexable": true
+    }
+  ],
+  "catalogue": {
+    "status": "published",
+    "index": "02",
+    "theme": "structure",
+    "coverStyle": "structure",
+    "coreIdea": "Structures from coding and engineering can expose hidden causes, missing variables",
+    "storeLine": "160-page study book · 51 structures · 6 case studies · 20-page workbook · AI reasoning framework"
+  },
+  "assets": [],
+  "source_evidence": {
+    "repository": "Joenasriani/structure-of-life-book",
+    "commit": "3afa5e5124042648993584ac086cf397420ba720",
+    "release_record": "PUBLISHING_RELEASE_MANIFEST.md"
+  }
+}
