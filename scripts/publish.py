@@ -2,7 +2,7 @@
 """Publication build, source validation and independent HTTP verification. Python standard library only."""
 from pathlib import Path
 from urllib.parse import urlsplit, urljoin, parse_qs
-import argparse, concurrent.futures, hashlib, html, json, re, shutil, sys, urllib.request, urllib.error, zipfile
+import datetime, argparse, concurrent.futures, hashlib, html, json, re, shutil, sys, urllib.request, urllib.error, zipfile
 ROOT=Path(__file__).resolve().parents[1]
 def read(path):return json.loads((ROOT/path).read_text())
 def digest(data):return hashlib.sha256(data).hexdigest()
@@ -133,13 +133,14 @@ def verify(base,report,source_repository,source_commit):
  require(source_commit and re.fullmatch("[a-f0-9]{40}",source_commit),"Specify immutable --source-commit")
  require(base and base.startswith('https://'),'Specify HTTPS --base for the actual deployment to verify')
  release=read('dist/release.json');checks=[]
+ expected_files=release['files']+[{'path':'release.json','sha256':digest((ROOT/'dist/release.json').read_bytes())}]
  def check_file(f):
   path='/'+f['path'];path='/' if path=='/index.html' else path[:-5] if path.endswith('.html') and not path.startswith('/google') and path!='/404.html' else path
   try:
    status,headers,body=request(base.rstrip('/')+path)
-   return {'path':path,'status':status,'expected_sha256':f['sha256'],'actual_sha256':digest(body),'pass':status==200 and digest(body)==f['sha256']}
+   return {'path':path,'status':status,'expected_sha256':f['sha256'],'actual_sha256':digest(body),'pass':status in ([200,404] if path=='/404.html' else [200]) and digest(body)==f['sha256']}
   except Exception as e:return {'path':path,'pass':False,'error':str(e)}
- with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:checks=list(pool.map(check_file,release['files']))
+ with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:checks=list(pool.map(check_file,expected_files))
  if (ROOT/'publication.json').exists():
   m=read('publication.json');c=m['checkout']
   try:
@@ -148,7 +149,7 @@ def verify(base,report,source_repository,source_commit):
    expected={'cmd':'_xclick','business':c['merchant'],'item_number':c['product_id'],'amount':c['amount'],'currency_code':c['currency'],'return':origin(m)+c['return_path'],'cancel_return':origin(m)+c['cancel_path']}
    checks.append({'path':c['endpoint'],'status':status,'pass':status==302 and target.scheme=='https' and target.netloc=='www.paypal.com' and all(q.get(k)==[v] for k,v in expected.items())})
   except Exception as e:checks.append({'path':c['endpoint'],'pass':False,'error':str(e)})
- data={'source_repository':source_repository,'source_commit':source_commit,'publication_manifest_sha256':digest((ROOT/'publication.json').read_bytes()) if (ROOT/'publication.json').exists() else None,'deployment_base':base,'expected_release_sha256':digest((ROOT/'dist/release.json').read_bytes()),'pass':all(x['pass'] for x in checks),'checks':checks,'payment_acceptance':'not_tested','buyer_receipt':'not_tested'}
+ data={'verified_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_repository':source_repository,'source_commit':source_commit,'publication_manifest_sha256':digest((ROOT/'publication.json').read_bytes()) if (ROOT/'publication.json').exists() else None,'deployment_base':base,'expected_release_sha256':digest((ROOT/'dist/release.json').read_bytes()),'pass':all(x['pass'] for x in checks),'checks':checks,'payment_acceptance':'not_tested','buyer_receipt':'not_tested'}
  save(Path(report),data);require(data['pass'],'Independent deployment checks failed; see '+report)
  print('PASS: deployed bytes and checkout mapping. Payment and receipt remain unverified.')
 def private_archive(path):
@@ -156,16 +157,42 @@ def private_archive(path):
  with zipfile.ZipFile(p) as z:
   require(z.testzip() is None,'Buyer ZIP CRC failure');names=[n for n in z.namelist() if not n.endswith('/')]
   require(len(names)==m['release']['file_count'],'Buyer ZIP file count differs')
-  require('RELEASE_MANIFEST.json' in names and 'SHA256SUMS.txt' in names,'Missing buyer manifest/checksum file')
-  for line in z.read('SHA256SUMS.txt').decode().splitlines():
-   if not line.strip():continue
-   expected,name=line.split(maxsplit=1);name=name.lstrip('* ')
-   require(name in names and digest(z.read(name))==expected,'Internal checksum mismatch: '+name)
- print('PASS: private archive identity, CRCs, file count and internal checksums')
+  require(len(names)==len(set(names)),'Duplicate ZIP member names')
+  inventory=m['release'].get('files')
+  if inventory:
+   require(set(names)=={f['path'] for f in inventory},'Buyer ZIP inventory differs')
+   for f in inventory:
+    data=z.read(f['path']);require(len(data)==f['bytes'] and digest(data)==f['sha256'],'Buyer file differs: '+f['path'])
+  else:
+   manifests=[n for n in names if Path(n).name=='RELEASE_MANIFEST.json'];sums=[n for n in names if Path(n).name=='SHA256SUMS.txt']
+   require(len(manifests)==1 and len(sums)==1,'Missing or ambiguous buyer manifest/checksum file')
+   json.loads(z.read(manifests[0]));prefix=str(Path(sums[0]).parent)
+   for line in z.read(sums[0]).decode().splitlines():
+    if not line.strip():continue
+    expected,name=line.split(maxsplit=1);name=name.lstrip('* ')
+    member=name if name in names else str(Path(prefix)/name)
+    require(member in names and digest(z.read(member))==expected,'Internal checksum mismatch: '+name)
+ print('PASS: private archive identity, CRCs, file count and recorded file checksums')
 def gate():
  local_validate();p=ROOT/'verification/preview.json';require(p.exists(),'Missing independent preview evidence')
  evidence=json.loads(p.read_text());require(evidence.get('pass') is True,'Preview verification failed')
  require(evidence.get('expected_release_sha256')==digest((ROOT/'dist/release.json').read_bytes()),'Preview evidence is stale')
+ require(re.fullmatch('[a-f0-9]{40}',evidence.get('source_commit','')),'Evidence lacks immutable source commit')
+ require(evidence.get('deployment_base','').startswith('https://'),'Evidence lacks HTTPS deployment URL')
+ checked=datetime.datetime.fromisoformat(evidence.get('verified_at',''))
+ age=(datetime.datetime.now(datetime.timezone.utc)-checked).total_seconds()
+ require(0<=age<=86400,'Preview evidence must be less than 24 hours old')
+ checks=evidence.get('checks',[]);require(checks and all(c.get('pass') is True for c in checks),'Missing or failed deployment checks')
+ paths=[c['path'] for c in checks];require(len(paths)==len(set(paths)),'Duplicate deployment checks')
+ expected=read('dist/release.json')['files']+[{'path':'release.json','sha256':digest((ROOT/'dist/release.json').read_bytes())}]
+ for f in expected:
+  path='/'+f['path'];path='/' if path=='/index.html' else path[:-5] if path.endswith('.html') and not path.startswith('/google') and path!='/404.html' else path
+  matches=[c for c in checks if c['path']==path]
+  require(len(matches)==1 and matches[0].get('expected_sha256')==f['sha256'] and matches[0].get('actual_sha256')==f['sha256'],'Missing or mismatched deployed bytes: '+path)
+ if (ROOT/'publication.json').exists():
+  m=read('publication.json')
+  require(evidence.get('publication_manifest_sha256')==digest((ROOT/'publication.json').read_bytes()),'Evidence publication differs')
+  require(m['checkout']['endpoint'] in paths,'Missing checkout verification')
  if (ROOT/'store.json').exists():
   require(not read('store.json')['blockers'],'Unresolved store cutover blockers')
   for e,m in load_catalogue():require(e.get('source_commit') and re.fullmatch('[a-f0-9]{40}',e['source_commit']),'Manifest needs immutable source commit')
