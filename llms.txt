@@ -1,14 +1,14 @@
 # The Structure of Life — The Structure of Reasoning
 
-Canonical page: https://the-structure-of-life.vercel.app/
-Indexed sample: https://the-structure-of-life.vercel.app/sample
-Library: https://reasoning-library.vercel.app/
-Sibling publication: https://manipulation-book.vercel.app/
+Canonical page: https://structure-of-life-book.vercel.app/
+Indexed sample: https://structure-of-life-book.vercel.app/sample
+Library: https://reasoning-library-chi.vercel.app/
+Sibling publication: https://manipulation-book-theta.vercel.app/
 
 Related AI / HCI research routes:
-- Human influence mechanisms for AI builders: https://manipulation-book.vercel.app/ai-human-behavior
-- Manipulation and AI safety: https://manipulation-book.vercel.app/ai-safety-manipulation
-- Human agency, choice architecture and AI interface design: https://manipulation-book.vercel.app/human-agency-hci
+- Human influence mechanisms for AI builders: https://manipulation-book-theta.vercel.app/ai-human-behavior
+- Manipulation and AI safety: https://manipulation-book-theta.vercel.app/ai-safety-manipulation
+- Human agency, choice architecture and AI interface design: https://manipulation-book-theta.vercel.app/human-agency-hci
 
 ## Edition
 Independent source-mapped study edition by J. Nasr.
