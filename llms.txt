@@ -2,7 +2,7 @@
 
 Canonical page: https://the-structure-of-life.vercel.app/
 Indexed sample: https://the-structure-of-life.vercel.app/sample
-Library: https://reasoning-library.vercel.app/
+Library: https://reasoning-and-logic.vercel.app/
 Sibling publication: https://manipulation-book.vercel.app/
 
 Related AI / HCI research routes:
@@ -28,4 +28,4 @@ Independent source-mapped study edition by J. Nasr.
 The book distinguishes observed/source-supported material from editorial synthesis, model construction and application ideas. Application directions and concepts are possibilities to test, not claims of software feasibility, market demand or guaranteed outcomes. The full paid study package remains outside the public repository; this repository exposes the public book page and sample only.
 
 ## Publication family
-The Reasoning Library is the discovery layer for both study editions. Cross-links identify related public research routes without treating the two books as one source or one claim set.
+Reasoning and Logic is the discovery layer for both study editions. Cross-links identify related public research routes without treating the two books as one source or one claim set.
