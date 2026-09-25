@@ -26,7 +26,7 @@
     {
       "source": "/",
       "headers": [
-        { "key": "Link", "value": "<https://structure-of-life-book.vercel.app/>; rel=\"canonical\"" },
+        { "key": "Link", "value": "<https://the-structure-of-life.vercel.app/>; rel=\"canonical\"" },
         { "key": "X-Robots-Tag", "value": "index, follow, max-image-preview:large" }
       ]
     }
