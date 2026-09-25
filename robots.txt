@@ -24,4 +24,4 @@ Disallow: /
 User-agent: ClaudeBot
 Disallow: /
 
-Sitemap: https://structure-of-life-book.vercel.app/sitemap.xml
+Sitemap: https://the-structure-of-life.vercel.app/sitemap.xml
