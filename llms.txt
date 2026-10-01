@@ -2,30 +2,36 @@
 
 Canonical page: https://the-structure-of-life.vercel.app/
 Indexed sample: https://the-structure-of-life.vercel.app/sample
+Methodology: https://the-structure-of-life.vercel.app/methodology
 Library: https://reasoning-and-logic.vercel.app/
-Sibling publication: https://manipulation-book-theta.vercel.app/
 
-Related AI / HCI research routes:
-- Human influence mechanisms for AI builders: https://manipulation-book-theta.vercel.app/ai-human-behavior
-- Manipulation and AI safety: https://manipulation-book-theta.vercel.app/ai-safety-manipulation
-- Human agency, choice architecture and AI interface design: https://manipulation-book-theta.vercel.app/human-agency-hci
+## Current edition
+Second study edition / October 2026. Independent source-mapped study edition by J. Nasr.
 
-## Edition
-Independent source-mapped study edition by J. Nasr.
-
-- 160-page study book
-- 27 chapters
-- 51 structures
-- 6 case studies
-- 52 source records
-- 20-page workbook
-- structured data and AI reasoning framework
-- 153 application directions
-- 24 application concepts
+- 157-page main study book
+- 36 chapters across 9 parts
+- 82 canonical structures across 8 families
+- 128 typed relationships
+- 6 cross-cutting audit rules
+- 6 integrated cases
+- 99 source identifiers representing 98 unique source works
+- 48-page research atlas
+- 46-page fillable workbook
+- structured ontology, relationship, claim-audit, negative-ontology and research-gap data
+- AI reasoning framework
+- 36 distinct chapter-specific AI application mappings
+- 18 cross-structure product concepts
 - canonical price: USD 23.33
+- fulfilment: private email delivery after payment verification; not an instant-download checkout
+
+## Core research question
+Can explicit structural habits used in engineering and computer science help reverse engineer living, cognitive and social systems, and exactly where does that transfer succeed, weaken, or fail?
+
+## Canonical reasoning protocol
+DEFINE → FRAME → OBSERVE → MAP → MODELS → PREDICT → TEST → UPDATE → ACT → LEARN AND STOP
 
 ## Interpretation rules
-The book distinguishes observed/source-supported material from editorial synthesis, model construction and application ideas. Application directions and concepts are possibilities to test, not claims of software feasibility, market demand or guaranteed outcomes. The full paid study package remains outside the public repository; this repository exposes the public book page and sample only.
+Evidence status and transfer status are separate. Strong evidence in one domain does not automatically justify transfer into another. The ontology is bounded to this edition; it is not presented as an exhaustive ontology of life or reality. Application mappings and product concepts are possibilities to test, not claims of feasibility, demand or guaranteed outcomes.
 
-## Publication family
-Reasoning and Logic is the discovery layer for both study editions. Cross-links identify related public research routes without treating the two books as one source or one claim set.
+## Paid/public boundary
+The public repository exposes the sales page, methodology and sample. The complete Buyer Edition remains private and is delivered after verified purchase.
