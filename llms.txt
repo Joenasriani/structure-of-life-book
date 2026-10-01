@@ -8,7 +8,7 @@ Library: https://reasoning-and-logic.vercel.app/
 ## Current edition
 Second study edition / October 2026. Independent source-mapped study edition by J. Nasr.
 
-- 157-page main study book
+- 162-page main study book
 - 36 chapters across 9 parts
 - 82 canonical structures across 8 families
 - 128 typed relationships
@@ -19,6 +19,8 @@ Second study edition / October 2026. Independent source-mapped study edition by 
 - 46-page fillable workbook
 - structured ontology, relationship, claim-audit, negative-ontology and research-gap data
 - AI reasoning framework
+- 96 explicit reasoning prompts expanded with plain-English explanations and real-life examples
+- 21 small OCR-safe text diagrams rendered as selectable text
 - 36 distinct chapter-specific AI application mappings
 - 18 cross-structure product concepts
 - canonical price: USD 23.33
