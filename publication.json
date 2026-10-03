@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "id": "the-structure-of-life",
+  "kind": "book",
+  "title": "The Structure of Life",
+  "subtitle": "The Structure of Reasoning",
+  "author": "J. Nasr",
+  "edition": "October 2026 Second Study Edition",
+  "publication_status": "published_study_edition",
+  "canonical_url": "https://the-structure-of-life.vercel.app/",
+  "catalogue_url": "https://reasoning-and-logic.vercel.app/",
+  "repository": {
+    "current": "Joenasriani/structure-of-life-book"
+  },
+  "deployment": {
+    "provider": "vercel",
+    "root_directory": "."
+  },
+  "checkout": {
+    "provider": "paypal",
+    "mode": "hosted_button",
+    "endpoint": "/api/buy",
+    "hosted_url": "https://www.paypal.com/ncp/payment/TG4UCZB7UXJJY",
+    "product_id": "STRUCTURE-2026-10",
+    "item_name": "The Structure of Life - The Structure of Reasoning | Second Study Edition | Personal Edition",
+    "amount": "23.33",
+    "currency": "USD",
+    "return_path": "/delivery",
+    "cancel_path": "/"
+  },
+  "release": {
+    "product_id": "STRUCTURE-2026-10",
+    "title": "The Structure of Life - The Structure of Reasoning",
+    "price": "23.33",
+    "currency": "USD",
+    "book_pages": 167,
+    "numbered_chapters": 36,
+    "parts": 9,
+    "integrated_cases": 6,
+    "research_atlas_pages": 48,
+    "workbook_pages": 46,
+    "source_identifiers": 99,
+    "unique_source_works": 98,
+    "structured_entries": 82,
+    "typed_relationships": 128,
+    "cross_cutting_rules": 6,
+    "application_mappings": 36,
+    "product_concepts": 18,
+    "question_prompts_expanded": 96,
+    "ocr_safe_text_diagrams": 21,
+    "structural_diagrams": 45,
+    "formats": [
+      "PDF",
+      "EPUB"
+    ]
+  },
+  "description": "An independent source-mapped second study edition on reverse engineering complex living, cognitive and social systems without mistaking the model for the world. The study system includes 82 canonical structures, 128 typed relationships, six integrated cases, 98 unique source works, a 48-page research atlas, a 46-page fillable workbook, plain-English explanations for 96 reasoning prompts and 45 aligned OCR-safe structural diagrams, structured data and an AI reasoning framework.",
+  "keywords": "reverse engineering, systems thinking, causal inference, observability, identifiability, open systems, feedback, resilience, agency, AI reasoning",
+  "routes": [
+    {
+      "path": "/delivery",
+      "file": "delivery.html",
+      "indexable": false
+    },
+    {
+      "path": "/",
+      "file": "index.html",
+      "indexable": true
+    },
+    {
+      "path": "/methodology",
+      "file": "methodology.html",
+      "indexable": true
+    },
+    {
+      "path": "/sample",
+      "file": "sample.html",
+      "indexable": true
+    },
+    {
+      "path": "/terms",
+      "file": "terms.html",
+      "indexable": true
+    }
+  ],
+  "catalogue": {
+    "status": "published",
+    "index": "02",
+    "theme": "structure",
+    "coverStyle": "structure",
+    "coreIdea": "How to infer hidden structure from partial outputs, test competing models, and identify where engineering concepts genuinely transfer into living, cognitive and social systems.",
+    "storeLine": "167 pages · PDF + EPUB · 82 structures · research atlas · fillable workbook · structured data · AI reasoning framework"
+  },
+  "assets": [],
+  "package": {
+    "formats": [
+      "PDF",
+      "EPUB"
+    ],
+    "includes": [
+      "167-page main study book",
+      "48-page research atlas",
+      "46-page fillable workbook",
+      "structured ontology, relationship and source data",
+      "claim audit",
+      "negative ontology",
+      "research-gap register",
+      "AI Reasoning Framework"
+    ],
+    "delivery": "Buyer Edition ZIP delivered privately by email after payment verification",
+    "ai_use": "Private AI / RAG use as permitted by the Personal Edition licence"
+  },
+  "positioning": {
+    "audience": [
+      "systems thinkers",
+      "researchers",
+      "product strategists",
+      "reasoning-system builders",
+      "AI and knowledge-system designers"
+    ],
+    "outcomes": [
+      "infer hidden structure from partial outputs",
+      "test competing models instead of collapsing early on one explanation",
+      "separate evidence strength from cross-domain transfer strength",
+      "use structured reasoning assets in private research and AI workflows"
+    ],
+    "topics": [
+      "systems thinking",
+      "reverse engineering",
+      "causal inference",
+      "observability",
+      "identifiability",
+      "feedback",
+      "resilience",
+      "agency",
+      "AI reasoning"
+    ]
+  }
+}
