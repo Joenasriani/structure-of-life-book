@@ -54,7 +54,7 @@
       "EPUB"
     ]
   },
-  "description": "An independent source-mapped second study edition on reverse engineering complex living, cognitive and social systems without mistaking the model for the world. The study system includes 82 canonical structures, 128 typed relationships, six integrated cases, 98 unique source works, a 48-page research atlas, a 46-page fillable workbook, plain-English explanations for 96 reasoning prompts and 45 aligned OCR-safe structural diagrams, structured data and an AI reasoning framework.",
+  "description": "A 167-page source-mapped study edition on reverse engineering living, cognitive and social systems. Includes 82 structures, 128 typed relationships, six integrated cases, 98 source works, a 48-page research atlas, a 46-page fillable workbook, 96 reasoning prompts, 45 structural diagrams, structured data and an AI reasoning framework.",
   "keywords": "reverse engineering, systems thinking, causal inference, observability, identifiability, open systems, feedback, resilience, agency, AI reasoning",
   "routes": [
     {
@@ -88,7 +88,7 @@
     "index": "02",
     "theme": "structure",
     "coverStyle": "structure",
-    "coreIdea": "How to infer hidden structure from partial outputs, test competing models, and identify where engineering concepts genuinely transfer into living, cognitive and social systems.",
+    "coreIdea": "Infer hidden structure from partial outputs, compare competing models and test when engineering concepts transfer to living, cognitive and social systems.",
     "storeLine": "167 pages · 82 structures · research atlas · fillable workbook · structured data · AI reasoning framework"
   },
   "assets": [],
