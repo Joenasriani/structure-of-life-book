@@ -1,0 +1,46 @@
+name: Validate Store Standard checkout
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify manifest and checkout handler agree
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import handler from './api/buy.js';
+
+          const publication = JSON.parse(fs.readFileSync('./publication.json', 'utf8'));
+          assert.equal(publication.checkout.provider, 'paypal');
+          assert.equal(publication.checkout.mode, 'hosted_button');
+          assert.equal(publication.checkout.endpoint, '/api/buy');
+          assert.equal(publication.release.product_id, publication.checkout.product_id);
+          assert.equal(publication.release.price, publication.checkout.amount);
+          assert.equal(publication.release.currency, publication.checkout.currency);
+
+          let out = {};
+          const res = {
+            setHeader(k, v) { out[k] = v; },
+            status(n) { out.status = n; return this; },
+            end() {},
+            redirect(n, u) { out.status = n; out.url = u; }
+          };
+          handler({method: 'GET'}, res);
+          assert.equal(out.status, 302);
+          assert.equal(
+            out.url.replace(/\/$/, ''),
+            publication.checkout.hosted_url.replace(/\/$/, '')
+          );
+
+          out = {};
+          handler({method: 'POST'}, res);
+          assert.equal(out.status, 405);
+          assert.equal(out.Allow, 'GET, HEAD');
+          NODE
